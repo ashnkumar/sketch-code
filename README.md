@@ -20,7 +20,7 @@ This project builds on the synthetically generated dataset and model architectur
 ### Install dependencies
 
 ```sh
-pip install -r  requirements.txt
+pip install -r requirements.txt
 ```
 
 
@@ -32,23 +32,26 @@ Download the data and pretrained weights:
 git clone https://github.com/ashnkumar/sketch-code.git
 cd sketch-code
 cd scripts
-sh get_data.sh
 
-# Get the pretrained model weights
+# If you have the AWS CLI installed
+sh get_data.sh
 sh get_pretrained_model.sh
+
+# Otherwise, manually download from below:
+# data => http://sketch-code.s3.amazonaws.com/data/all_data.zip
+# model_json file => http://sketch-code.s3.amazonaws.com/model_json_weights/model_json.json
+# model_weights_file => http://sketch-code.s3.amazonaws.com/model_json_weights/weights.h5
 ```
 
-Converting a single image into HTML code:
+Converting a single image into HTML code, using pretrained weights:
 ```sh
 cd src
 
 python convert_single_image.py --png_path {path/to/img.png} \
       --output_folder {folder/to/output/html} \
-      --model_json_file ../bin/model_json.json \
-      --model_weights_file ../bin/pretrained_weights.h5 \
-      --style {default || facebook || airbnb}
+      --model_json_file {path/to/model/json_file.json} \
+      --model_weights_file {path/to/model/weights.h5}
 ```
-Styles include `default`, `facebook`, and `airbnb`
 
 Converting a batch of images in a folder to HTML:
 ```sh
@@ -56,9 +59,8 @@ cd src
 
 python convert_batch_of_images.py --pngs_path {path/to/folder/with/pngs} \
       --output_folder {folder/to/output/html} \
-      --model_json_file ../bin/model_json.json \
-      --model_weights_file ../bin/pretrained_weights.h5 \
-      --style {default || facebook || airbnb}
+      --model_json_file {path/to/model/json_file.json} \
+      --model_weights_file {path/to/model/weights.h5}
 ```
 
 Train the model:
@@ -72,16 +74,16 @@ python train.py --data_input_path {path/to/folder/with/pngs/guis} \
       --epochs 10 \
       --model_output_path {path/to/output/model}
       --augment_training_data 1
-      
+
 # training starting with pretrained model
 python train.py --data_input_path {path/to/folder/with/pngs/guis} \
       --validation_split 0.2 \
       --epochs 10 \
       --model_output_path {path/to/output/model} \
       --model_json_file ../bin/model_json.json \
-      --model_weights_file ../bin/pretrained_weights.h5 \      
+      --model_weights_file ../bin/pretrained_weights.h5 \
       --augment_training_data 1
-```      
+```
 
 Evalute the generated prediction using the [BLEU score](https://machinelearningmastery.com/calculate-bleu-score-for-text-python/)
 ```sh
@@ -90,11 +92,11 @@ cd src
 # evaluate single GUI prediction
 python evaluate_single_gui.py --original_gui_filepath  {path/to/original/gui/file} \
       --predicted_gui_filepath {path/to/predicted/gui/file}
-      
+
 # training starting with pretrained model
 python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/original/guis} \
       --predicted_guis_filepath {path/to/folder/with/predicted/guis}
-```  
+```
 
 ## License
 
