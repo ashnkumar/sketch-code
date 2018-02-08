@@ -1,4 +1,5 @@
 #! /bin/bash
 mkdir ../bin
-aws s3 cp s3://sketch-code/model_json_weights/model_json.json ../bin/model_json.json
-aws s3 cp s3://sketch-code/model_json_weights/weights.h5 ../bin/pretrained_weights.h5
+wget http://sketch-code.s3.amazonaws.com/model_json_weights/model_json.json -O ../bin/model_json.json
+wget http://sketch-code.s3.amazonaws.com/model_json_weights/weights.h5 -I ../bin/weights.h5
+

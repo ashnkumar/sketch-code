@@ -14,7 +14,7 @@ This project builds on the synthetically generated dataset and model architectur
 ## Setup
 ### Prerequisites
 
-- Python 3
+- Python 3 (not compatible with python 2)
 - pip
 
 ### Install dependencies
@@ -23,8 +23,7 @@ This project builds on the synthetically generated dataset and model architectur
 pip install -r requirements.txt
 ```
 
-
-## Usage
+## Example Usage
 
 Download the data and pretrained weights:
 ```sh
@@ -33,17 +32,25 @@ git clone https://github.com/ashnkumar/sketch-code.git
 cd sketch-code
 cd scripts
 
-# If you have the AWS CLI installed
+# Get the data and pretrained weights
 sh get_data.sh
 sh get_pretrained_model.sh
-
-# Otherwise, manually download from below:
-# data => http://sketch-code.s3.amazonaws.com/data/all_data.zip
-# model_json file => http://sketch-code.s3.amazonaws.com/model_json_weights/model_json.json
-# model_weights_file => http://sketch-code.s3.amazonaws.com/model_json_weights/weights.h5
 ```
 
-Converting a single image into HTML code, using pretrained weights:
+Converting an example drawn image into HTML code, using pretrained weights:
+```sh
+cd src
+
+python convert_single_image.py --png_path ../examples/drawn_example1.png \
+      --output_folder ./generated_html \
+      --model_json_file ../bin/model_json.json \
+      --model_weights_file ../bin/weights.h5
+```
+
+
+## General Usage
+
+Converting a single image into HTML code, using weights:
 ```sh
 cd src
 
