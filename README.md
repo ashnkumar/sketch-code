@@ -113,7 +113,7 @@ python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/ori
 
 ### The MIT License (MIT)
 
-Copyright (c) 2018 Ashwin Kumar<ash.nkumar@gmail.com@gmail.com>
+Copyright (c) 2018 Ashwin Kumar<ash.nkumar@gmail.com>
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
