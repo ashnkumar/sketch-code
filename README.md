@@ -1,5 +1,5 @@
 # SketchCode
-
+=============
 ![](https://img.shields.io/badge/python-3-brightgreen.svg) ![](https://img.shields.io/badge/tensorflow-1.1.0-orange.svg)
 
 *Generating HTML Code from a hand-drawn wireframe*
@@ -16,18 +16,22 @@ This project builds on the synthetically generated dataset and model architectur
 
 
 ## Setup
+=========
 ### Prerequisites
+==================
 
 - Python 3 (not compatible with python 2)
 - pip
 
 ### Install dependencies
+=========================
 
 ```sh
 pip install -r requirements.txt
 ```
 
 ## Example Usage
+=================
 
 Download the data and pretrained weights:
 ```sh
@@ -53,6 +57,7 @@ python convert_single_image.py --png_path ../examples/drawn_example1.png \
 
 
 ## General Usage
+=================
 
 Converting a single image into HTML code, using weights:
 ```sh
@@ -110,8 +115,10 @@ python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/ori
 ```
 
 ## License
+===========
 
 ### The MIT License (MIT)
+==========================
 
 Copyright (c) 2018 Ashwin Kumar<ash.nkumar@gmail.com@gmail.com>
 
