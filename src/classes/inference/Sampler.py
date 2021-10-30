@@ -6,8 +6,8 @@ import shutil
 import json
 import numpy as np
 
-from keras.models import model_from_json
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import model_from_json
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 from classes.dataset.Dataset import *
 from classes.dataset.ImagePreprocessor import *
