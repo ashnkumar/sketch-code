@@ -6,9 +6,9 @@ import pdb
 import hashlib
 import numpy as np
 
-from keras.preprocessing.text import Tokenizer, one_hot
-from keras.preprocessing.sequence import pad_sequences
-from keras.utils import to_categorical
+from tensorflow.keras.preprocessing.text import Tokenizer, one_hot
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.utils import to_categorical
 
 from .ImagePreprocessor import *
 
