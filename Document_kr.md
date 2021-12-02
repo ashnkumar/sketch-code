@@ -1,7 +1,7 @@
 # 딥 러닝을 사용한 자동화된 프런트 엔드 개발
 ##### SketchCode: 아이디어에서 HTML 로 5초안에 전환
 
-![Preview](https://github.com/vbnm134678/sketch-code/blob/documentation-korean-translation/image/header_image.png)
+![Preview](https://github.com/ashnkumar/sketch-code/raw/master/header_image.png)
 
 *[Ashwin Kumar](https://www.linkedin.com/in/ashnkumar/)는 회계 자동화에 머신러닝을 사용하는 Y Combinator의 신생기업인 [Sway Finance](https://swayfinance.com/) 공동 설립자였습니다. 이곳 Insight에서 그는 사용자가 손으로 그린 와이어프레임으로 작동하는 HTML 웹사이트를 만들 수 있는 모델을 개발하여 디자인 설계 프로세스를 크게 가속화했습니다. 그는 현재 [Mysthic](https://www.mythic-ai.com/)의 딥러닝 과학자입니다.*
 
