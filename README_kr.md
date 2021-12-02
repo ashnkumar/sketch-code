@@ -4,7 +4,7 @@
 
 *손으로 그린 와이어 프레임에서 HTML 코드 생성*
 
-![Preview](https://github.com/vbnm134678/sketch-code/blob/documentation-korean-translation/image/header_image.png)
+![Preview](https://github.com/ashnkumar/sketch-code/blob/master/image_for_documents/header_image.png)
 
 SketchCode는 손으로 그린 웹 모형을 작동하는 HTML 코드로 변환하는 딥 러닝 모델입니다. [이미지 캡션](https://towardsdatascience.com/image-captioning-in-deep-learning-9cd23fb4d8d2) 아키텍처를 사용하여 손으로 그린 웹 사이트 와이어 프레임에서 HTML 마크업을 생성합니다.
 
