@@ -164,5 +164,5 @@ datasets/*
 bin/
 bin2/
 
-# Generated guis / htmls
+# Generated guis/htmls
 generated_guis_htmls/
