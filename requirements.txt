@@ -1,5 +1,5 @@
 Keras==2.1.2
-tensorflow==1.4.0
+tensorflow==2.6.4
 nltk==3.2.5
 opencv-python==3.3.0.10
 numpy==1.13.1
