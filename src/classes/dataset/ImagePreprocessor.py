@@ -7,7 +7,7 @@ import shutil
 import numpy as np
 from PIL import Image
 import cv2
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 class ImagePreprocessor:
 
