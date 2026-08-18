@@ -1,4 +1,4 @@
-# SketchCode
+# SketchCode - An Amazing project
 
 ![](https://img.shields.io/badge/python-3-brightgreen.svg) ![](https://img.shields.io/badge/tensorflow-1.1.0-orange.svg)
 
