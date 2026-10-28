@@ -10,6 +10,7 @@ BASE_DIR_NAME = os.path.dirname(__file__)
 DEFAULT_DSL_MAPPING_FILEPATH = "{}/styles/default-dsl-mapping.json".format(BASE_DIR_NAME)
 FACEBOOK_DSL_MAPPING_FILEPATH = "{}/styles/facebook_dsl_mapping.json".format(BASE_DIR_NAME)
 AIRBNB_DSL_MAPPING_FILEPATH = "{}/styles/airbnb_dsl_mapping.json".format(BASE_DIR_NAME)
+SUPPORTED_STYLES = ('default', 'facebook', 'airbnb')
 
 
 class Compiler:
@@ -31,6 +32,8 @@ class Compiler:
             return FACEBOOK_DSL_MAPPING_FILEPATH
         elif style == 'airbnb':
             return AIRBNB_DSL_MAPPING_FILEPATH
+        raise ValueError("Unsupported style {!r}. Choose from: {}".format(
+            style, ', '.join(SUPPORTED_STYLES)))
 
     def compile(self, generated_gui):
         dsl_file = generated_gui

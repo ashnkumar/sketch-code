@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from os.path import basename
 
 from classes.inference.Sampler import *
+from classes.inference.Compiler import SUPPORTED_STYLES
 
 def build_parser():
   parser = ArgumentParser()
@@ -23,7 +24,7 @@ def build_parser():
                       dest='print_bleu_score', help='see BLEU score for single example', default=0)
   parser.add_argument('--original_guis_filepath', type=str,
                       dest='original_guis_filepath', help='if getting BLEU score, provide original guis folder filepath', default=None)
-  parser.add_argument('--style', type=str,
+  parser.add_argument('--style', type=str, choices=SUPPORTED_STYLES,
                       dest='style', help='style to use for generation', default='default')
   return parser
 

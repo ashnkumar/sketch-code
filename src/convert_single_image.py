@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from os.path import basename
 
 from classes.inference.Sampler import *
+from classes.inference.Compiler import SUPPORTED_STYLES
 
 def build_parser():
   parser = ArgumentParser()
@@ -19,7 +20,7 @@ def build_parser():
                       required=True)
   parser.add_argument('--model_weights_file', type=str,
                       dest='model_weights_file', help='trained model weights file', required=True)
-  parser.add_argument('--style', type=str,
+  parser.add_argument('--style', type=str, choices=SUPPORTED_STYLES,
                       dest='style', help='style to use for generation', default='default')
   parser.add_argument('--print_generated_output', type=int,
                       dest='print_generated_output', help='see generated GUI output in terminal', default=1)
